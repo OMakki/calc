@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+body {
+  color: #666;
+  background-color: #fff;
+  width: 92%;
+  margin: 0 auto;
+}
+header {
+  font-size: 32px;
+  border-bottom: 1px solid #bbb;
+  padding: 12px 0 4px;
+}
+#header {
+  margin: 0 auto;
+  width: fit-content;
+  cursor: pointer;
+}
+#countdown {
+  display: none;
+}
+#drill {
+  display: none;
+}
+.correct,
+.incorrect,
+#timer,
+#stopWatch,
+#timeUp,
+#result,
+#perfect {
+  display: none;
+}
+#timer span,
+#stopWatch span {
+  display: block;
+  font-size: 24px;
+  width: fit-content;
+  margin: 8px 0 0 auto;
+}
+#selectButtons {
+  display: flex;
+}
+.selectionContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+.selectTitle {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.selectButton {
+  width: fit-content;
+  margin: 8px auto;
+}
+input[type="radio"] {
+  display: none;
+}
+label {
+  color: #000000;
+  width: 128px;
+  display: inline-block;
+  background-color: #8eb8ff;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+label:hover {
+  background-color: #75a9ff;
+}
+input[type="radio"]:checked + label {
+  background-color: #4689ff;
+}
+label > span {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+.importantButton {
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+  padding: 8px 12px 4px;
+  border: 4px solid #5d99ff;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #5d99ff;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.importantButton:hover {
+  background-color: #d9e5ff;
+}
+#drillContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.question {
+  width: 50%;
+  font-size: 20px;
+}
+.questionUnit {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px;
+}
+.questionUnit> div,
+.questionUnit > input[type="text"] {
+  display: inline-block;
+  margin-right: 4px;
+}
+.questionUnit > input[type="text"] {
+  width: 24px;
+  line-height: 20px;
+  border: 1px solid #666;
+}
+#complete {
+  margin-top: 24px;
+}
+.correct {
+  margin: -30px -28px 0;
+  color: #f00;
+}
+.incorrect {
+  margin: -30px -26px 0;
+  color: #00f;
+}
+.popup {
+  padding: 16px;
+  position: fixed;
+  top: 128px;
+  left: calc((100% - 360px) / 2) ;
+  background-color: #fff;
+  border: 1px solid #666;
+  z-index: 100;
+  width: 360px;
+}
+#timeUp .message,
+#result .message {
+  width: fit-content;
+  margin: 0 auto;
+}
+#result .message p,
+#result .messagge #score {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+#result .messagge #score {
+  font-weight: bold;
+}
+#timeUp #buttonDiv,
+#result #buttonDiv {
+  display: flex;
+}
+#timeUp .importantButton,
+#result .importantButton {
+  font-size: 24px;
+  padding: 4px 8px 2px;
+  margin: 16px auto 0;
+}
+#perfect {
+  width: fit-content;
+  border: 2px solid #5d99ff;
+  border-radius: 4px;
+  padding: 4px 8px 2px 16px;
+  font-weight: bold;
+  color: #5d99ff;
+  background-color: #d9e5ff;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  font-size: 24px;
+}
