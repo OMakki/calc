@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body {
+  font-family: "sans-serif";
   color: #666;
   background-color: #fff;
   width: 92%;
@@ -42,7 +43,7 @@ header {
   display: flex;
 }
 .selectionContent {
-  flex: 1;
+  width: 25%;
   display: flex;
   flex-direction: column;
   margin-bottom: 36px;
@@ -101,6 +102,7 @@ label > span {
 .question {
   width: 50%;
   font-size: 20px;
+  margin-top: 10px;
 }
 .questionUnit {
   width: fit-content;
@@ -132,7 +134,7 @@ label > span {
   padding: 16px;
   position: fixed;
   top: 128px;
-  left: calc((100% - 360px) / 2) ;
+  left: calc((100% - 394px) / 2);
   background-color: #fff;
   border: 1px solid #666;
   z-index: 100;
@@ -174,4 +176,34 @@ label > span {
   top: -16px;
   left: -16px;
   font-size: 24px;
+}
+@media screen and (max-width: 960px) {
+  #selectButtons {
+    flex-wrap: wrap;
+  }
+  .selectionContent {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #selectButtons {
+    display: block;
+  }
+  .selectionContent {
+    width: 100%;
+  }
+  #start {
+    margin-bottom: 24px;
+  }
+  #drillContent {
+    display: block;
+  }
+  .question {
+    width: 100%;
+  }
+  .popup {
+    top: 64px;
+    left: calc((100% - 274px) / 2);
+    width: 240px;
+  }
 }
