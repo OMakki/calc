@@ -181,19 +181,23 @@ function stopWatch(startTime) {
 // 採点
 function checkAnswer(index) {
   let isCorrect;
-  let answer = Number($('#answer' + index).val().replace(/[０-９]/g, function (s) {
-    return String.fromCharCode(s.charCodeAt(0) - 65248);
-  }));
-  switch(operator) {
-    case '+':
-      isCorrect = (answer === (Number($('#firstNum' + index).html()) + Number($('#secondNum' + index).html())));
-      break;
-    case '-':
-      isCorrect = (answer === (Number($('#firstNum' + index).html()) - Number($('#secondNum' + index).html())));
-      break;
-    case '×':
-      isCorrect = (answer === (Number($('#firstNum' + index).html()) * Number($('#secondNum' + index).html())));
-      break;
+  if ($('#answer' + index).val() === '') {
+    isCorrect = false;
+  } else {
+    let answer = Number($('#answer' + index).val().replace(/[０-９]/g, function (s) {
+      return String.fromCharCode(s.charCodeAt(0) - 65248);
+    }));
+    switch(operator) {
+      case '+':
+        isCorrect = (answer === (Number($('#firstNum' + index).html()) + Number($('#secondNum' + index).html())));
+        break;
+      case '-':
+        isCorrect = (answer === (Number($('#firstNum' + index).html()) - Number($('#secondNum' + index).html())));
+        break;
+      case '×':
+        isCorrect = (answer === (Number($('#firstNum' + index).html()) * Number($('#secondNum' + index).html())));
+        break;
+    }
   }
   if (isCorrect) {
     $('#correct' + index).css('display', 'block');
