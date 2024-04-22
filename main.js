@@ -141,7 +141,7 @@ function createDrillHtml(index) {
       secondNum = Math.floor(Math.random() * (99 - 10)) + 10;
       break;
   }
-  drillHtml += '<div class="question"><div class="questionUnit"><div>' + ( '00' + index ).slice( -2 ) + '.</div>';
+  drillHtml += '<div class="question"><div class="questionUnit"><div class="questionNum">' + ( '00' + index ).slice( -2 ) + '. </div>';
   drillHtml += '<div id="firstNum' + index + '">' + firstNum + '</div>';
   drillHtml += '<div id="operator' + index + '">' + operator + '</div>';
   drillHtml += '<div id="secondNum' + index + '">' + secondNum + '</div>';
@@ -158,7 +158,7 @@ function Timer(limit) {
   const s = String(Math.floor(diff / 100) % 60).padStart(2, '0');
   const ms = String(diff % 100).padStart(2, '0');
   $('#timer span').html(`${m}:${s}.${ms}`);
-  if (diff <= 500) {
+  if (diff <= 500 && diff > 0) {
     // 残り時間が5秒以下の時
     $('#timer span').css('color', 'red');
   } else if (diff <= 0) {
