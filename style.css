@@ -84,7 +84,7 @@ label > span {
   width: fit-content;
   margin: 0 auto;
   display: block;
-  padding: 8px 12px 4px;
+  padding: 0 12px 4px;
   border: 1px solid #5d99ff;
   border-radius: 8px;
   background-color: #fff;
@@ -167,7 +167,7 @@ label > span {
 #timeUp .importantButton,
 #result .importantButton {
   font-size: 20px;
-  padding: 4px 8px 2px;
+  padding: 0 8px 2px;
   margin: 16px auto 0;
 }
 #perfect {
